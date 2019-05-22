@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import NavComponent from './components/Nav';
 import MapComponent from './components/Map'
-import './App.css';
-import {Container} from 'reactstrap'
+// import './App.css';
+import {Container} from 'reactstrap';
+import 'mapbox-gl/dist/mapbox-gl.css';
+require('dotenv').config();
 
 class App extends Component {
   constructor(props){
@@ -18,7 +20,9 @@ class App extends Component {
        <Container>
        <MapComponent />
        </Container>
+       
       </div>
+      
     );
   }
 }

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
-import ReactMapGL from 'react-map-gl';
+import MapGL, {Marker} from 'react-map-gl';
+import SvgUmbrella from './Svg';
+
 
 class MapComponent extends Component {
 
@@ -10,17 +12,30 @@ class MapComponent extends Component {
         latitude: 32.08088,
         longitude: 48,
         zoom: 3.5,
-        width: 800
+        width: 800,
       },
       token: '*********************************************'
     };
   
     render() {
+        const mapStyle = {position: 'absolute',
+            width: '100%',
+            height: '100%',
+            overflow: 'hidden',
+            display: 'flex',
+            flexDirection: 'row-reverse'}
       return (
-        <ReactMapGL mapboxApiAccessToken={this.state.token}
-          {...this.state.viewport}
-          onViewportChange={(viewport) => this.setState({viewport})}
-        />
+         
+            
+                <MapGL mapboxApiAccessToken={this.state.token}
+                {...this.state.viewport}
+                style={mapStyle}
+                onViewportChange={(viewport) => this.setState({viewport})}
+                >
+            <SvgUmbrella />
+            </MapGL>
+            
+           
       );
     }
   }
