@@ -14,7 +14,7 @@ class MapComponent extends Component {
         zoom: 3.5,
         width: 800,
       },
-      token: 'pk.eyJ1IjoiYXZpdnNhYiIsImEiOiJjanZ3OG9vMDc0YTdjM3lxb3UwZnhpOTg1In0.T99KiFjrARnq1HcNsp9Tpw'
+      token: '************************************'
     };
   
     render() {
