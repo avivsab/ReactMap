@@ -14,7 +14,7 @@ class MapComponent extends Component {
         zoom: 3.5,
         width: 800,
       },
-      token: '*********************************************'
+      token: 'pk.eyJ1IjoiYXZpdnNhYiIsImEiOiJjanZ3OG9vMDc0YTdjM3lxb3UwZnhpOTg1In0.T99KiFjrARnq1HcNsp9Tpw'
     };
   
     render() {
@@ -32,7 +32,9 @@ class MapComponent extends Component {
                 style={mapStyle}
                 onViewportChange={(viewport) => this.setState({viewport})}
                 >
+                <Marker latitude={32} longitude={49} offsetLeft={-20} offsetTop={-10}>
             <SvgUmbrella />
+            </Marker>
             </MapGL>
             
            
